@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const isPalindrome = function(x) {
+        if (x < 0) return false;
+        // const _x = String(x);
+        const _x = x + ''; // 转为字符串，试验与toString()的效率区别
+        return _x === _x.split('').reverse().join('');
+      };
+
+      console.time('test');
+      console.log(isPalindrome(0));
+      console.log(isPalindrome(12.21));
+      console.log(isPalindrome(121));
+      console.log(isPalindrome(-121));
+      console.log(isPalindrome(10));
+      console.log(isPalindrome(121));
+      console.log(isPalindrome(1234));
+      console.log(isPalindrome(10));
+      console.log(isPalindrome(3));
+      console.log(isPalindrome(101));
+      console.log(isPalindrome(21120));
+      console.timeEnd('test');
+    </script>
+  </body>
+</html>
